@@ -1,0 +1,10 @@
+import pyshorteners
+
+
+acortador = pyshorteners.Shortener()
+
+url = input("Por favor, ponga la URL que quiera acortar --> ")
+
+url_acortada = acortador.dagd.short(url)
+
+print("La url acortada es la siguiente --> ", url_acortada)
