@@ -1,0 +1,25 @@
+"""
+SIMULA EL JUEGO DE ADIVINAR EL NUMERO
+"""
+import random
+
+# Hacemos que el ordenador elija un numero aleatorio
+ordenador = random.randint(1,10)
+# El inicio de los intentos
+intentos = 0
+
+# Creamos un bucle infinito
+while True:
+    # Le pedimos al usuario que ponga un numero cualquiera
+    usuario = int(input("Introduce tu intento: "))
+    # Contamos los intentos en el que el usuario adivino el numero del ordenador
+    intentos += 1
+    # Y hacemos un if para ver si el usuario se paso, quedo corto o adivino
+    if usuario > ordenador:
+        print("Te has pasado")
+    elif usuario < ordenador:
+        print("Te has quedado corto")
+    else:
+        print(f"Bien, el numero era {ordenador}")
+        print(f"Intentos: {intentos}")
+        break
