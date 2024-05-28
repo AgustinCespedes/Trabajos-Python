@@ -1,0 +1,7 @@
+from key import KEY
+import requests
+
+ciudad = input("Introduce tu ciudad: ")
+repuesta = requests.get(f"http://api.weatherapi.com/v1/current.json?key={KEY}&q={ciudad}")
+json = repuesta.json()
+print(json["current"]["temp_c"])
