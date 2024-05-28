@@ -1,3 +1,6 @@
+KEY = ("7cb922a814fe4ffcadc30754242805 ")
+
+
 from key import KEY
 import requests
 
