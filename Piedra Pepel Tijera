@@ -1,0 +1,24 @@
+"""
+SIMULA EL JUEGO DE PIEDRAS PAPEL O TIJERAS
+"""
+import random
+
+# Opciones del juego en una lista
+opciones = ["tijera", "papel", "piedra"]
+
+# El usuario elije lo que quiere tirar
+usuario = input("Elije: ").lower()
+ordenador = random.choice(opciones)
+
+# Si el usuario pone algo vacio da error!
+if usuario not in opciones:
+    print("Error")
+    quit()
+
+# Las opciones para ver si el usuario gana, empata o pierde con el ordenador
+if usuario == ordenador:
+    print("Empate")
+elif usuario == "tijera" and ordenador == "piedra" or usuario == "piedra" and ordenador == "papel" or usuario == "papel" and ordenador == "tijera":
+    print("Has perdido!")
+else:
+    print("Has ganado!")
