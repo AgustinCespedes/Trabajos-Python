@@ -1,0 +1,29 @@
+"""
+HAZ UN PROGRAMA PARA APRENDER A SUMAR EN POCO TIEMPO
+"""
+# Importamos las librerias
+import time
+import random
+# Ponemos los aciertos desde 0
+aciertos = 0
+# Ponemos un tiempo, para saber cuanto se tardo
+tiempo_inicio = time.time()
+# Creamos un bucle for para poner ejercicios dificiles
+for i in range(5):
+    numero1 = random.randint(1,10)
+    numero2 = random.randint(1,10)
+    correcto = numero1+numero2
+
+    respuesta = int(input(f"Cuanto es {numero1} + {numero2}?: "))
+    # Ponemos para saber si la suma es correcta o se equivoco
+    if respuesta == correcto:
+        print("Correcto!")
+        aciertos += 1
+    else:
+        print(f"FATAL!, el numero era {correcto}")
+
+# Vemos cuanto tiempo se demoro en hacer todas las sumas
+tiempo_total = time.time()-tiempo_inicio
+print(f"Has tardado {tiempo_total:.2f} segundos")
+# Vemos cuanto acerto
+print(f"Tus aciertos: {aciertos}")
