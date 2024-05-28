@@ -1,0 +1,22 @@
+"""
+SIMULA EL JUEGO DE CARA O CRUZ
+"""
+# Importamos la libreria random para que el ordenador elija algo aleatorio
+import random
+# Ponemos las opciones del juego en una lista
+opciones = ["cara", "cruz"]
+# Le pedimos al usuario que elija cara o cruz
+usuario = input("cara o cruz: ").lower()
+# Si el usuario pone algo vacio le mada un error y se cierra el programa o juego
+if usuario not in opciones:
+    print("Error")
+    quit()
+# Vemos que resultado arrojo el ordenador
+resultado = random.choice(opciones)
+# Imprimimos el resultado
+print("El resultado es:", resultado)
+# Creamo un if para saber si el usuario le gano o no al ordenador
+if resultado == usuario:
+    print("Has ganado!")
+else:
+    print("Has perdido")
