@@ -1,0 +1,17 @@
+"""
+HAZ UN RELOJ QUE SE ACTUALIZE A
+CADA SEGUNDO
+"""
+
+import time
+import os
+
+while True:
+    # Definimos el orden del reloj
+    hora = time.strftime("%H:%M:%S")
+    # Borramos la consola cada vez que se reinicie el bucle
+    os.system("cls")
+    # Imprimimos el reloj
+    print(hora)
+    # Esperar un segundo para que el reloj avance
+    time.sleep(1)
