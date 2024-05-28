@@ -1,0 +1,18 @@
+"""
+HAZ UNA FUNCION QUE PASE DE SEGUNDOS A DIAS, HORAS, MINUTOS
+"""
+
+# Conversion de los segundos a dias, horas, minutos, segundos
+def convertir_segundos(seg):
+    dias = seg // 86400
+    seg %= 86400
+    horas = seg // 3600
+    seg %= 3600
+    minutos = seg // 60
+    seg %= 60
+
+    # Retornamos para que lo imprima ya convertido
+    return f"{dias} dias, {horas} horas, {minutos} minutos y {seg} segundos"
+
+# Imprimimos con los segundos que queramos
+print(convertir_segundos(100000))
